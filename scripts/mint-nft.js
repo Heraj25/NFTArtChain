@@ -20,7 +20,7 @@ async function mintNFT(tokenURI) {
     gas: 1000000, // fee estimate to complete the transaction
     data: nftContract.methods
       .createNFT("0x0d28235B6191a66A3410cc1e3CeBfE53602D7865", tokenURI)
-      .encodeABI(), // call the createNFT function from our herajapp.sol file and pass the account that should receive the minted NFT.
+      .encodeABI(), // call the createNFT function from our herajapp .sol file and pass the account that should receive the minted NFT.
   };
 
   const signPromise = alchemyWeb3.eth.accounts.signTransaction(
